@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin-add.css">
+    <title>Admin Add Selection</title>
+
+</head>
+<body>
+    <header class="header">
+        <div class="home-collegamento">
+            <a href="../admin-file-management/admin-file-management.html"> <img src="../asset/casetta.png" id="home" alt="home"></a> 
+        </div>
+        <select id="languageSelector">
+            <option value="" disabled selected> 🌐 </option>
+            <option value="it"> IT </option>
+            <option value="en"> EN </option>
+            <option value="fr"> FR </option>
+            <option value="dt"> DT </option>
+            <option value="es"> ES </option>
+            <option value="ch"> CH </option>
+            <option value="ru"> RU </option>
+            <option value="tk"> TK </option>
+        </select>
+    </header>
+<div class="container-admin">
+    
+    <form method="POST" action="process-form.php" enctype="multipart/form-data">
+        <div class="input-container">
+            <!-- Nome del file -->
+            <input type="text" name="title" id="inputName" placeholder="Titolo PDF" required>
+            <!-- Anno (4 cifre) -->
+            <input type="text" name="anno" id="inputProductionYear" placeholder="Anno" min="1900" max="2100" required>
+            
+            <!-- Caricamento del PDF in italiano -->
+            <div class="file-input-wrapper">
+                <input type="file" name="pdf_it" id="fileInput1" accept=".pdf" class="file-input" required>
+                <span class="file-name" id="fileName1">Carica il file in Italiano</span>
+            </div>
+            
+            <!-- Caricamento del PDF in inglese -->
+            <div class="file-input-wrapper">
+                <input type="file" name="pdf_en" id="fileInput2" accept=".pdf" class="file-input" required>
+                <span class="file-name" id="fileName2">Carica il file in Inglese</span>
+            </div>
+        </div>
+        <button id="sendButton" class="btn" type="submit">Invia</button>
+    </form>
+</div> 
+<footer>
+    
+</footer>
+
+    <script src="admin-add.js"></script>
+</body>
+</html>

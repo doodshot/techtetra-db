@@ -1,0 +1,72 @@
+@media only screen and (max-width: 768px) {
+    #languageSelector {
+        position: fixed;  
+        top: 20px;
+        right: 20px;
+        z-index: 1000;    
+        padding: 8px 12px;
+        font-family: 'Dosis', sans-serif;
+        font-size: 16px;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0);  
+        border: 2px solid #fff;
+        border-radius: 50px;
+        cursor: pointer;
+        outline: none;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    #languageSelector:hover {
+        color: #25344D;
+        border: 2px solid #25344D;
+        text-align: center;
+    }
+    body {
+        font-family: 'Dosis', sans-serif;
+        background-image: url(../../asset/selmi_background.jpeg);
+        background-size: auto;
+        display: flex;
+        justify-content: center;  /* Centra orizzontalmente */
+        align-items: center;      /* Centra verticalmente */
+        height: 100vh;            /* Altezza completa della viewport */
+        margin: 0;
+    }
+    p {
+        padding: 20px;
+        color: #fff;
+        text-align: center;
+        font-family: 'Dosis', sans-serif;
+        font-weight: 700; /* Peso grassetto */
+    }
+
+    img {
+        width: 394px;
+        height: 132px;
+    }
+
+    #main {
+        text-align: center;       /* Centra il testo all'interno */
+    }
+
+    footer {
+        width: 100%;             /* Il footer occupa l'intera larghezza */
+        text-align: right;        /* Allinea il testo a destra */
+        padding: 10px 20px;       /* Padding interno del footer */
+        color: #fff;
+        position: absolute;       /* Posizionamento fisso in fondo alla pagina */
+        bottom: 0;
+        margin-bottom: 20px;
+    }
+    footer a{
+        color: #fff;
+        padding: 10px;
+        border: solid 2px #fff;
+        border-radius: 18px;
+    }
+    footer a:hover{
+        border: solid 2px #25344D;
+        color: #25344D;
+        border-radius: 18px;
+    }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina di Login - Selmi Group</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="user-login.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img id="logo-selmi" src="../asset/selmi-logo-mini.png" alt="logo-selmi">
+        </div>
+        <select id="languageSelector">
+            <option value="it"> IT </option>
+            <option value="en"> EN </option>
+            <option value="fr"> FR</option>
+            <option value="dt"> DT</option>
+            <option value="es"> ES</option>
+            <option value="ch"> CH</option>
+            <option value="ru"> RU</option>
+            <option value="tk"> TK</option>
+        </select>
+    </header>
+
+    <div class="main-carousel">
+        <div class="carousel-cell" id="carousel-cell-2"><img src="../asset/allineatore-stampi-spinner.avif" alt="Immagine 2"></div>
+        <div class="carousel-cell" id="carousel-cell-3"><img src="../asset/legend-temperatrice-cioccolato.avif" alt="Immagine 3"></div>
+        <div class="carousel-cell" id="carousel-cell-4"><img src="../asset/selmi-one-temperatrice-cioccolato.avif" alt="Immagine 4"></div>
+        <div class="carousel-cell" id="carousel-cell-5"><img src="../asset/top-ex-temperatrice-cioccolato.avif" alt="Immagine 5"></div>
+    </div>
+
+    <div class="input-container">
+        <input type="number" class="input-field" placeholder="Inserisci l'anno di acquisto">
+        <button class="submit-button" id="submit-button">Invia</button>
+    </div>
+
+    <div class="footer" id="Qr-user">
+        <p>Vuoi scansionare nuovamente il QR?</p>
+    </div>
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="user-login.js"></script>
+</body>
+</html>
