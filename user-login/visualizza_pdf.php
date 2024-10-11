@@ -14,7 +14,7 @@ $lingua = $_POST['lingua'];
 // Esegui una query in base all'anno di acquisto
 $sql = "SELECT title, file_path_it, file_path_en FROM pdf WHERE anno = ?";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("i", $anno_acquisto);
+$stmt->bind_param("i", $anno_acquisto); // lo uso per passare parametri in maniera bind i sta per int
 $stmt->execute();
 $result = $stmt->get_result();
 
