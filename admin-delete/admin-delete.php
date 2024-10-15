@@ -32,13 +32,11 @@ $result = $conn->query($sql);
             // Output dei dati per ciascun file
             while ($row = $result->fetch_assoc()) {
                 echo '<li class="file-item" id="file' . $row['id'] . '">';
-                // Mostra il file italiano
-                echo '<span><span class="file-icon">&#128196;</span> ' . basename($row['file_path_it']) . ' (IT)</span>';
+                
+                // Mostra il titolo e le icone per i file italiano e inglese
+                echo '<span><span class="file-icon">&#128196;</span> ' . $row['title'] . ' </span>';
                 echo '<span class="delete-icon" onclick="deleteFile(' . $row['id'] . ', \'it\')">&#128465;</span>';
                 
-                // Mostra il file inglese
-                echo '<br><span><span class="file-icon">&#128196;</span> ' . basename($row['file_path_en']) . ' (EN)</span>';
-                echo '<span class="delete-icon" onclick="deleteFile(' . $row['id'] . ', \'en\')">&#128465;</span>';
                 echo '</li>';
             }
         } else {

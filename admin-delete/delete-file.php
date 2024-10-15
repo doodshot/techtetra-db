@@ -7,35 +7,18 @@ if ($conn->connect_error) {
     die("Connessione fallita: " . $conn->connect_error);
 }
 
-// Recupera l'ID dal POST
-$fileId = $_POST['id'];
+// Ottieni l'ID del file dalla richiesta AJAX
+$id = $_POST['id'];
 
-// Query per ottenere il percorso del file
-$sql = "SELECT file_path_it FROM pdf WHERE id = ?";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("i", $fileId);
-$stmt->execute();
-$stmt->bind_result($filePath);
-$stmt->fetch();
-$stmt->close();
+// Esegui la query di eliminazione
+$sql = "DELETE FROM pdf WHERE id = $id";
 
-// Elimina il file dal server
-if (file_exists($filePath)) {
-    unlink($filePath);
-}
-
-// Elimina l'entry dal database
-$sql = "DELETE FROM pdf WHERE id = ?";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("i", $fileId);
-
-if ($stmt->execute()) {
-    echo "File eliminato con successo.";
+if ($conn->query($sql) === TRUE) {
+    echo "success";
 } else {
-    echo "Errore durante l'eliminazione.";
+    echo "error";
 }
 
 // Chiudi la connessione
-$stmt->close();
 $conn->close();
 ?>

@@ -1,21 +1,24 @@
-function deleteFile(fileId, fileType) {
-    if (confirm("Sei sicuro di voler cancellare questo file?")) {
-        // Effettua una richiesta AJAX per eliminare il file
+function deleteFile(fileId) {
+    if (confirm('Sei sicuro di voler eliminare questo file?')) {
+        // Fai una richiesta AJAX per eliminare il file dal database
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "delete-file.php", true); // richiamo funzione delete.php per fare la conn al Db e fare la query DELETE
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.open("POST", "delete_file.php", true);
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
         xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                alert(xhr.responseText);
-                // Rimuove l'elemento corrispondente dalla lista
-                if (fileType === 'it') {
-                    document.querySelector('#file' + fileId + ' .file-icon').parentNode.remove();
-                } else if (fileType === 'en') {
-                    document.querySelector('#file' + fileId + ' br').nextSibling.remove();
-                    document.querySelector('#file' + fileId + ' br').remove();
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                // Se la risposta del server indica che il file è stato eliminato correttamente
+                if (xhr.responseText == "success") {
+                    // Rimuovi l'elemento dal DOM
+                    var fileElement = document.getElementById('file' + fileId);
+                    fileElement.parentNode.removeChild(fileElement);
+                } else {
+                    alert("Errore durante l'eliminazione del file.");
                 }
             }
         };
-        xhr.send("id=" + fileId + "&fileType=" + fileType);
+
+        // Invia la richiesta con l'ID del file
+        xhr.send("id=" + fileId);
     }
 }
