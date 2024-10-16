@@ -18,7 +18,7 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seleziona un file</title>
+    <title>admin-delete</title>
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="admin-delete.css">
 </head>
@@ -40,7 +40,7 @@ $result = $conn->query($sql);
                 echo '</li>';
             }
         } else {
-            echo '<li class="file-item">Nessun file trovato</li>';
+            echo '<li id="text" class="file-item">Nessun file trovato</li>';
         }
         // Chiudi la connessione
         $conn->close();

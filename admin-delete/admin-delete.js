@@ -21,3 +21,34 @@ function deleteFile(fileId) {
         xhr.send("id=" + fileId);
     }
 }
+
+    //funzione cambio lingua
+    document.addEventListener('DOMContentLoaded', function() {
+        const savedLanguage = localStorage.getItem('language');
+        const noFile = document.getElementById('text');
+        if (savedLanguage === 'it') {
+            noFile.textContent = 'File non trovato';
+            option.textContent = 'IT';
+        } else if (savedLanguage === 'en') {
+            noFile.textContent = 'File not found';
+            option.textContent = 'EN';
+        } else if (savedLanguage === 'fr') {
+            noFile.textContent = 'Fichier non trouvé';
+            option.textContent = 'FR';
+        } else if (savedLanguage === 'es') {
+            noFile.textContent = 'Archivo no encontrado';
+            option.textContent = 'ES';
+        } else if (savedLanguage === 'ru') {
+            noFile.textContent = 'Файл не найден';
+            option.textContent = 'RU';
+        } else if (savedLanguage === 'ch') {
+            noFile.textContent = '文件未找到';
+            option.textContent = 'CH';
+        } else if (savedLanguage === 'dt') {
+            noFile.textContent = 'Datei nicht gefunden';
+            option.textContent = 'DT';
+        } else if (savedLanguage === 'tk') {
+            noFile.textContent = 'Dosya bulunamadı';
+            option.textContent = 'TK';
+        }
+    });
