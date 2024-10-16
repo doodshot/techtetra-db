@@ -18,7 +18,6 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "error";
 }
-
 // Chiudi la connessione
 $conn->close();
 ?>

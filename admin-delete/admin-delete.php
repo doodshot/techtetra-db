@@ -8,7 +8,7 @@ if ($conn->connect_error) {
 }
 
 // Query per recuperare i file
-$sql = "SELECT id, title, file_path_it, file_path_en FROM pdf";
+$sql = "SELECT id, title FROM pdf";
 $result = $conn->query($sql);
 ?>
 
