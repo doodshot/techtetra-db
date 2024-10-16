@@ -34,9 +34,12 @@
 
     <form action="visualizza_pdf.php" method="POST">
         <div class="input-container">
+
             <!-- Anno -->
-            <input type="number" name="anno" class="input-field" maxlength="4" oninput="this.value=this.value.slice(0,this.maxLength)" min="1900" max="2100" placeholder="Inserisci l'anno di acquisto" required>
-            <!-- lingua -->
+            <select name="anno" class="input-field" id="anno-select" required>
+                <option value="" disabled selected>Seleziona un anno</option>
+            </select>           
+             <!-- lingua -->
             <select class="input-field" id="language-selection" name="lingua" required>
                 <option value="it">Italiano</option>
                 <option value="en">Inglese</option>
@@ -52,5 +55,6 @@
 
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="user-login.js"></script>
+    <script src="get_year.js"> </script>
 </body>
 </html>
