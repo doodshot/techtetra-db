@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina di Login - Selmi Group</title>
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="admin-file-management.css">
-    <title>File Management</title>
-    
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="admin-modifyed.css">
 </head>
 <body>
-    <header class="header">
+    <header>
+      <a href="../admin-file-management/admin-file-management.html"> <img src="../asset/casetta.png" id="home" alt="home"></a> 
         <select id="languageSelector">
             <option value="" disabled selected> 🌐 </option>
             <option value="it"> IT </option>
@@ -22,13 +23,16 @@
             <option value="tk"> TK </option>
         </select>
     </header>
-    <img id="logoSelmi" src="../asset/logoSelmi.png" alt="logo-selmi">
-    <div class="container">
-    <a href="../admin-delete/admin-delete.php"><button id="deletePdf" class="btn">Cancella</button></a>
-    <a href="../admin-modifyed/admin-modifyed.html"><button id="modifyPdf" class="btn">Modifica</button></a>
-    <a href="../admin-add/admin-add.html"><button id="addPdf" class="btn">Aggiungi</button></a>
-    <a href="../admin-vision/admin-vision.php"><button id="addPdf" class="btn">Visualizza</button></a>
+    <div class="title">
+        <h1>Seleziona un file</h1>
     </div>
-    <script src="admin-file-management.js"></script>
+    <div class="file-input-container">
+        <div class="file-input-container">
+            <?php include 'admin-modifyed-fetch.php'; ?>
+        </div>
+    
+    </div>
+
+    <script src="admin-modifyed.js"></script>
 </body>
 </html>

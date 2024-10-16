@@ -17,7 +17,6 @@ function deleteFile(fileId) {
                 }
             }
         };
-
         // Invia la richiesta con l'ID del file
         xhr.send("id=" + fileId);
     }
