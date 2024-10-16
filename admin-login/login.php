@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Se c'è un messaggio di errore, reindirizza con il messaggio
     if ($error_message) {
-        header("Location: error-page.php?error=" . urlencode($error_message));
+        header("Location: admin-login.php?error=" . urlencode($error_message));
         exit();
     }
 }
