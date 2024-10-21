@@ -126,4 +126,11 @@
         padding: 10px;
         color: #adbfde;
     }
+    a {
+        text-align: none;
+        color: #ffffff;
+    }
+    a:hover{
+        color: #9fc1fb;
+    }
 }
