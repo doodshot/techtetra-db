@@ -55,5 +55,6 @@
         <!-- Aggiungi qui eventuali informazioni per il footer -->
     </footer>
 
+    <script src="admin-login.js"></script>
 </body>
 </html>

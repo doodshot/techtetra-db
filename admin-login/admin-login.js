@@ -1,6 +1,6 @@
 document.getElementById('languageSelector').addEventListener('change', function() {
         const language = this.value;
-        const email = document.getElementById('email');
+        const email = document.getElementById('username');
         const password = document.getElementById('password');
         const loginButton = document.getElementById('login-button');
         const forgotPassword = document.getElementById('forgot-password');
@@ -80,7 +80,7 @@ document.getElementById('languageSelector').addEventListener('change', function(
     //funzione cambio lingua
     document.addEventListener('DOMContentLoaded', function() {
         const savedLanguage = localStorage.getItem('language');
-        const email = document.getElementById('email');
+        const email = document.getElementById('username');
         const password = document.getElementById('password');
         const loginButton = document.getElementById('login-button');
         const forgotPassword = document.getElementById('forgot-password');
