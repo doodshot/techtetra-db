@@ -37,12 +37,12 @@
 
             <!-- Anno -->
             <select name="anno" class="input-field" id="anno-select" required>
-                <option value="" disabled selected>Seleziona un anno</option>
+                <option value="" id="placeholder-option" disabled selected>Seleziona un anno</option>
             </select>           
              <!-- lingua -->
             <select class="input-field" id="language-selection" name="lingua" required>
                 <option value="it">Italiano</option>
-                <option value="en">Inglese</option>
+                <option value="en">English</option>
             </select>
     
             <button class="submit-button" id="submit-button">Invia</button>
@@ -50,7 +50,7 @@
     </form>
 
     <div class="footer" id="Qr-user">
-        <p>Vuoi scansionare nuovamente il QR?</p>
+        <a href="../intro/intro.html"><p>Vuoi scansionare nuovamente il QR?</p></a>
     </div>
 
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
