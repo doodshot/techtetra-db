@@ -134,7 +134,7 @@ document.getElementById('languageSelector').addEventListener('change', function(
         }
         else if(savedLanguage === 'dt')
         {
-            email.placeholder = 'Email';
+        email.placeholder = 'Email';
             password.placeholder = 'Passwort';
             loginButton.textContent = 'Login';
             forgotPassword.textContent = 'Benötigen Sie Hilfe?';
