@@ -28,7 +28,7 @@
     </div>
     <div class="file-input-container">
         <div class="file-input-container">
-            <a id="admin-modify-link" href="../admin-modify/admin-modify.html"><?php include 'admin-modifyed-fetch.php'; ?></a>
+            <a id="admin-modify-link" href="../admin-modify/admin-modify.php"><?php include 'admin-modifyed-fetch.php'; ?></a>
         </div>
     </div>
     <script src="admin-modifyed.js"></script>
