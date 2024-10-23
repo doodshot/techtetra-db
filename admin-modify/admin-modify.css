@@ -1,48 +1,9 @@
-@media screen and (max-width: 768px) {
-    body {
-        font-family: 'Dosis', sans-serif;
-        font-size: 20px;
-        background-color: #1e2c3a;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        min-height: 100vh;
-        box-sizing: border-box;
-    }
-
-    .container {
-        width: 100%;
-    }
-
-    h1 {
-        font-size: 24px;
-    }
-
-    /* Aumentare le dimensioni del box e del button */
-    .upload-box {
-        width: 100%;
-        max-width: 300px;
-        height: 300px;
-    }
-
-    .modify-btn {
-        width: 100%;
-        max-width: 300px;
-        padding: 15px 20px; /* Aumento del padding per il bottone */
-        font-size: 18px;
-    }
-}
-
 body {
     font-family: Arial, sans-serif;
     background-color: #1e2c3a;
     color: white;
     margin: 0;
-    padding: 60px 0 0 0;
-    display: flex;
-    flex-direction: column;
+    padding-top: 60px;
     min-height: 100vh;
 }
 
@@ -56,45 +17,80 @@ body {
     padding: 20px;
 }
 
+.containerrow {
+    display: flex;
+    flex-direction: row; /* Assicura che i bambini siano disposti in una riga */
+    justify-content: center; /* Allinea gli elementi al centro */
+    gap: 20px;  /* Spazio tra i pulsanti */
+    margin-bottom: 20px;
+}
+
 h1 {
     margin-bottom: 20px;
     font-size: 28px;
 }
 
-.upload-box {
-    width: 300px; /* Aumento dimensioni */
-    height: 300px; /* Aumento dimensioni */
+/* Nascondi il reale input per il file */
+input[type="file"] {
+    display: none;
+}
+
+/* Crea uno stile per il "button" personalizzato */
+.custom-file-label {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
     background-color: #3a4b5c;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.5;
     cursor: pointer;
-    margin: 0 auto 20px;
+    position: relative;
+    margin: 0 10px; /* Spazio tra i due bottoni */
 }
 
-.upload-box p {
-    margin: 0;
+/* Posiziona il testo all'interno del bottone */
+.custom-file-label span {
+    display: block;
+    margin-top: 30px;
     font-size: 24px;
+    color: #fff;
 }
 
-.upload-box img {
-    width: 80px;  /* Aumento della dimensione dell'immagine */
+/* Posiziona l'immagine all'interno del bottone */
+.custom-file-label img {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
     height: 80px;
-    margin-top: 10px;
+}
+
+/* Hover effect */
+.custom-file-label:hover {
+    background-color: #4a5b6c;
 }
 
 .modify-btn {
     background-color: #3a4b5c;
+    width: 100px;
+    height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     color: white;
     border: none;
-    padding: 15px 20px; /* Aumento del padding per maggiore usabilità */
-    font-size: 18px; /* Font più grande */
+    padding: 15px 20px;
+    font-size: 18px;
     border-radius: 5px;
-    cursor: pointer;
-}
+    margin-top: 20px;
+    width: 100px;
+    height: 50px;
 
+}
 .modify-btn:hover {
     background-color: #4a5b6c;
 }
@@ -123,7 +119,7 @@ header {
     font-family: 'Dosis', sans-serif;
     font-size: 16px;
     color: #fff;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: transparent;
     border: 2px solid #fff;
     border-radius: 50px;
     cursor: pointer;
@@ -132,8 +128,6 @@ header {
     transition: all 0.3s ease;
     height: 40px;
     box-sizing: border-box;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
 }
 
 .language-selector select:hover {
@@ -144,26 +138,4 @@ header {
 
 .language-selector option {
     color: #25344D;
-}
-
-/* Aggiusta il padding del body per fare spazio all'header */
-body {
-    padding-top: 60px;
-}
-
-@media screen and (max-width: 768px) {
-    /* Stili per mobile */
-
-    header {
-        padding: 10px;
-    }
-
-    .home-icon img {
-        width: 25px;
-        height: 25px;
-    }
-
-    .language-selector select {
-        font-size: 14px;
-    }
 }

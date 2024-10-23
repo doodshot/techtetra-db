@@ -115,6 +115,7 @@ input[type="file"]:hover {
     background-color: #6180b6;
 }
 .btn {
+    display: block;
     width: 200px; /* o la larghezza desiderata */
     padding: 20px;
     margin-left: auto;
