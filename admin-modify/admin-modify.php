@@ -33,14 +33,14 @@
                     <span>PDF Italiano</span>
                     <img src="../asset/pdf-icon.png" alt="PDF Icon">
                 </label>
-                <input type="file" name="pdfItalian" id="fileInputItalian" accept=".pdf">
+                <input type="file" name="pdfItalian" id="fileInputItalian" accept=".pdf" required>
 
                 
                 <label for="fileInputEnglish" class="custom-file-label">
                     <span>PDF English</span>
                     <img src="../asset/pdf-icon.png" alt="PDF Icon">
                 </label>
-                <input type="file" name="pdfEnglish" id="fileInputEnglish" accept=".pdf">
+                <input type="file" name="pdfEnglish" id="fileInputEnglish" accept=".pdf" required>
 
                 <!-- ID del file -->
                 <input type="hidden" name="fileId" value="<?php echo htmlspecialchars($_GET['id']); ?>">

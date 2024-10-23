@@ -24,8 +24,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (move_uploaded_file($italianPdf['tmp_name'], $italianPdfName) && move_uploaded_file($englishPdf['tmp_name'], $englishPdfName)) {
             
             // Aggiorna il database con i nuovi percorsi PDF
-            if (update_pdf_in_db($fileId, $italianPdfName, $englishPdfName)) {
-                echo 'PDF aggiornati con successo!';
+            if (update_pdf_in_db( $fileId, $italianPdfName, $englishPdfName)) {
+                header('Location: ../admin-modified-selection/admin-modified-selection.html');
+                exit;
             } else {
                 echo 'Errore durante l\'aggiornamento del database.';
             }
