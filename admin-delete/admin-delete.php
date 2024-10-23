@@ -24,20 +24,24 @@ $result = $conn->query($sql);
 </head>
 
 <body>
-    <img src="../asset/logoselmi.png" alt="Logo Home" class="logo-image">
+    <header>
+      <a href="../admin-file-management/admin-file-management.html"> <img src="../asset/casetta.png" id="home" alt="home"></a> 
+    </header>
+    <div class="title">
+        <h1>Seleziona un file</h1>
+    </div>
     <ul class="file-list">
         <?php
         // Verifica se ci sono risultati
         if ($result->num_rows > 0) {
             // Output dei dati per ciascun file
             while ($row = $result->fetch_assoc()) {
-                echo '<li class="file-item" id="file' . $row['id'] . '">';
-                
+                echo "<div class='file-item'>";
                 // Mostra il titolo e le icone per i file italiano e inglese
-                echo '<span><span class="file-icon">&#128196;</span> ' . $row['title'] . ' </span>';
-                echo '<span class="delete-icon" onclick="deleteFile(' . $row['id'] . ', \'it\')">&#128465;</span>';
-                
-                echo '</li>';
+                echo "<img src='../asset/pdf-icon.png' alt='pdf-img'>";
+                echo '<p class="p-title">' . $row['title'] . '</p>';
+                echo "<img src='../asset/cestino.png' alt='cestino-img' class='delete-icon' onclick=\"deleteFile(" . $row['id'] . ", 'it')\">";
+                echo '</div>';
             }
         } else {
             echo '<li id="text" class="file-item">Nessun file trovato</li>';

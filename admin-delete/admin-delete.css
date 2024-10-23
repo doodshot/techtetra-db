@@ -1,51 +1,76 @@
-@media screen and (max-width: 768px) {
+:root {
+    --bs-primary: #466292;
+    --bs-selmi: #466292;
+    --bs-selmi-100: #adbfde;
+    --bs-selmi-500: #304a78;
+    --bs-selmi-600: #2d3f5e;
+    --bs-selmi-700: #25344d;
+}
+
+@media only screen and (max-width: 768px) {
     body {
         font-family: 'Dosis', sans-serif;
-        font-size: 20px;
-        background-color: #25344D;
-        color: white;
         margin: 0;
-        padding: 20px;
+        padding: 0;
+        background-color: var(--bs-selmi-600);
+        color: #ffffff;
+        height: 100vh;
         display: flex;
         flex-direction: column;
-        min-height: 100vh;
     }
 
-    .logo-image {
-        width: auto;
-        height: 50px;
-        margin-bottom: 20px;
-        object-fit: contain;
+    #home {
+        width: 40px;
+        height: 40px;
+        transition: transform 0.3s ease;
+    }
+
+    #home:hover{
+        transform: scale(1.1);
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: left;
+        padding: 20px;
+    }
+
+    .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px;
     }
 
     .file-list {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        flex-grow: 1;
-        overflow-y: auto;
+        display: inline;
+        padding: 20px;
     }
 
     .file-item {
         display: flex;
-        justify-content: space-between;
-        align-items: space-between;
-        padding: 15px 0;
-        border-bottom: 1px solid #34495e;
+        justify-content: flex-start; /* Allinea tutti gli elementi all'inizio */
+        align-items: center; /* Allinea verticalmente gli elementi al centro */
+        padding: 20px;
+        gap: 20px; /* Spazio tra immagine e paragrafo */
     }
-
-    .file-icon {
-        margin-right: 10px;
-        font-size: 20px;
+    
+    .p-title {
+        text-align: left;
+        margin: 0; /* Rimuove il margine predefinito del paragrafo */
+        font-size: 24px;
     }
-
-    .file-name {
-        flex-grow: 1;
+    
+    img {
+        width: 50px;
+        height: 50px;
     }
 
     .delete-icon {
+        margin-left: auto; /* Spinge l'icona del cestino all'estrema destra */
         color: #bdc3c7;
         font-size: 20px;
+        cursor: pointer; /* Cambia il cursore a mano per l'interattività */
     }
 }
-
