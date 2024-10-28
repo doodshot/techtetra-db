@@ -22,8 +22,8 @@ if ($result->num_rows > 0) {
     // Ciclo per generare l'output HTML per ciascun file
     while($row = $result->fetch_assoc()) {
         echo "<div class='file-input-container-text'>";
-        echo "<a href='../admin-modify/admin-modify.html?id=" . $row['id'] . "'>"; // Passa l'ID del file tramite query string
-        echo "<p>" . $row['title'] . "</p>";
+        echo "<a href='../admin-modify/admin-modify.php?id=" . $row['id'] . "'>"; // Passa l'ID del file tramite query string
+        echo "<p>" . htmlspecialchars($row['title']) . "</p>";  // Utilizza htmlspecialchars per prevenire XSS
         echo "<img src='../asset/pdf-icon.png' alt='pdf-img'>";
         echo "</a>"; // Chiudi il link
         echo "</div>";

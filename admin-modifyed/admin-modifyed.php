@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-      <a href="../admin-file-management/admin-file-management.html"> <img src="../asset/casetta.png" id="home" alt="home"></a> 
+        <a href="../admin-file-management/admin-file-management.html"> <img src="../asset/casetta.png" id="home" alt="home"></a> 
         <select id="languageSelector">
             <option value="" disabled selected> 🌐 </option>
             <option value="it"> IT </option>
@@ -27,9 +27,7 @@
         <h1>Seleziona un file</h1>
     </div>
     <div class="file-input-container">
-        <div class="file-input-container">
-            <a id="admin-modify-link" href="../admin-modify/admin-modify.php"><?php include 'admin-modifyed-fetch.php'; ?></a>
-        </div>
+        <?php include 'admin-modifyed-fetch.php'; ?> <!-- Includi qui senza <a> -->
     </div>
     <script src="admin-modifyed.js"></script>
 </body>
