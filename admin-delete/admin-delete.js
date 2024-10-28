@@ -9,9 +9,11 @@ function deleteFile(fileId) {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 // Se la risposta del server indica che il file è stato eliminato correttamente
                 if (xhr.responseText == "success") {
-                    // Rimuovi l'elemento dal DOM
                     var fileElement = document.getElementById('file' + fileId);
-                    fileElement.parentNode.removeChild(fileElement);
+                    if(fileElement) {
+                        fileElement.parentNode.removeChild(fileElement);
+                    }
+                    location.reload();
                 } else {
                     alert("Errore durante l'eliminazione del file.");
                 }
