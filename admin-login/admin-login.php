@@ -40,11 +40,11 @@
                     <button type="submit" id="login-button">Login</button>
                 </form>
                 <a id="forgot-password" href="mailto:info@techtetra.com">Hai bisogno di assistenza?</a>
-                <p id="error-message">
+                <p id="error-message" class="<?php echo isset($_GET['error']) ? 'visible' : 'hidden'; ?>">
                     <?php
-                    if (isset($_GET['error'])) {
-                        echo htmlspecialchars($_GET['error']);
-                    }
+                        if (isset($_GET['error'])) {
+                            echo htmlspecialchars($_GET['error']);
+                        }
                     ?>
                 </p>
             </div>

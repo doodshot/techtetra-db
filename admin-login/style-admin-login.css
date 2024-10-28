@@ -163,4 +163,11 @@
         padding: 0;             /* Rimuove tutto il padding */
         unicode-bidi: normal;   /* Ripristina il valore predefinito */
     }
+    .hidden {
+        display: none;
+    }
+    .visible {
+        display: block;
+        color: red;
+    }
 }

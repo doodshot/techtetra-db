@@ -3,7 +3,7 @@
         font-family: 'Dosis', sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #25344D;
+        background-color: #2d3f5e;
         color: #ffffff;
         height: 100vh;
         display: flex;
@@ -50,11 +50,7 @@
         transition: all 0.3s ease;
     }
     option{
-        color: #25344D;
-    }
-
-    body {
-        background-color: #25344D;
+        color: #2d3f5e;
     }
 }
 .container-admin{
