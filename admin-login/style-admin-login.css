@@ -171,3 +171,195 @@
         color: red;
     }
 }
+
+/* no media query */
+
+#logo-selmi {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: auto;
+    height: 40px;
+    transition: opacity 0.3s ease;
+}
+
+#error-message {
+    color: red;
+    padding: 30px;
+    border-radius: 5px;
+    margin-top: 2px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+#logo-selmi:hover {
+    opacity: 0.8;
+}
+
+#languageSelector {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    padding: 8px 12px;
+    font-family: 'Dosis', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 40px;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+#languageSelector:hover {
+    color: #6180b6;
+    border: 2px solid #6180b6;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+option {
+    color: #25344D;
+}
+
+body {
+    font-family: 'Dosis', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
+    background-color: #25344D;
+    background-size: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+p {
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+}
+
+img {
+    width: 394px;
+    height: 132px;
+}
+
+#login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    border-radius: 18px;
+    padding: 30px;
+}
+
+#login img {
+    width: 283px;
+    height: 283px;
+    margin-bottom: 24px;
+    transition: transform 0.3s ease;
+}
+
+#login img:hover {
+    transform: scale(1.05);
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 283px;
+}
+
+#login-form input,
+#login-form button {
+    width: 100%;
+    margin-bottom: 24px;
+    border-radius: 10px;
+    border: 2px solid #FFFFFF;
+    background-color: #466292;
+    color: #AEAEAE;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+#login-form input:focus,
+#login-form input:not(:placeholder-shown) {
+    color: #FFFFFF;
+}
+
+#login-form input::placeholder {
+    color: #AEAEAE;
+}
+
+#login-form button {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+#login-form button:hover {
+    background-color: #25344D;
+}
+
+#forgot-password {
+    padding: 20px;
+    margin-top: 24px;
+    color: #FFFFFF;
+}
+
+#login::before,
+#login::after,
+.login-container::before,
+.login-container::after {
+    display: none;
+}
+
+#login,
+.login-container,
+#login img {
+    border: none;
+    text-decoration: none;
+}
+
+#login ul,
+#login li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#login * {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    display: block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    unicode-bidi: normal;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+    color: red;
+}

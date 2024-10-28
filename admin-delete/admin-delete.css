@@ -73,4 +73,162 @@
         font-size: 20px;
         cursor: pointer; /* Cambia il cursore a mano per l'interattività */
     }
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* questo per centrare lestgosky*/
+        justify-content: center;
+        align-items: center;
+    }
+    .modal p {
+        color: #25344d;
+        font-size:  32px;
+    }
+    .modal-content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+    }
+    
+    .modal-button {
+        padding: 10px 20px;
+        margin: 5px;
+        cursor: pointer;
+    }
+    
+    .confirm {
+        background-color: #e74c3c;
+        color: white;
+        font-family: 'Dosis';
+        font-size: 24px;
+    }
+    
+    .cancel {
+        background-color: #ccc;
+        color: #25344d;
+        font-family: 'Dosis';
+        font-size: 24px;
+    }
+}
+
+
+/* NO MEDIA QUERY */
+
+
+body {
+    font-family: 'Dosis', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bs-selmi-600);
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#home {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+#home:hover {
+    transform: scale(1.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    padding: 20px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.file-list {
+    display: inline;
+    padding: 20px;
+}
+
+.file-item {
+    display: flex;
+    justify-content: flex-start; /* Allinea tutti gli elementi all'inizio */
+    align-items: center; /* Allinea verticalmente gli elementi al centro */
+    padding: 20px;
+    gap: 20px; /* Spazio tra immagine e paragrafo */
+}
+
+.p-title {
+    text-align: left;
+    margin: 0; /* Rimuove il margine predefinito del paragrafo */
+    font-size: 24px;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+}
+
+.delete-icon {
+    margin-left: auto; /* Spinge l'icona del cestino all'estrema destra */
+    color: #bdc3c7;
+    font-size: 20px;
+    cursor: pointer; /* Cambia il cursore a mano per l'interattività */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal p {
+    color: #25344d;
+    font-size: 32px;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.modal-button {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.confirm {
+    background-color: #e74c3c;
+    color: white;
+    font-family: 'Dosis';
+    font-size: 24px;
+}
+
+.cancel {
+    background-color: #ccc;
+    color: #25344d;
+    font-family: 'Dosis';
+    font-size: 24px;
 }

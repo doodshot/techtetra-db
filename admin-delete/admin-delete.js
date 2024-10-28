@@ -1,28 +1,50 @@
+let fileIdToDelete = null;
+
 function deleteFile(fileId) {
-    if (confirm('Sei sicuro di voler eliminare questo file?')) {
-        // Fai una richiesta AJAX per eliminare il file dal database
+    // Salva l'ID del file e mostra la finestra modale
+    fileIdToDelete = fileId;
+    document.getElementById("deleteModal").style.display = "flex";
+}
+
+// Gestore per il pulsante "Conferma" nella modale
+document.getElementById("confirmDelete").addEventListener("click", function () {
+    if (fileIdToDelete !== null) {
+        // Effettua la richiesta AJAX per eliminare il file
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "delete-file.php", true);
         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4 && xhr.status == 200) {
-                // Se la risposta del server indica che il file è stato eliminato correttamente
-                if (xhr.responseText == "success") {
-                    var fileElement = document.getElementById('file' + fileId);
-                    if(fileElement) {
+                if (xhr.responseText === "success") {
+                    // Rimuovi l'elemento dal DOM e ricarica la pagina
+                    var fileElement = document.getElementById('file' + fileIdToDelete);
+                    if (fileElement) {
                         fileElement.parentNode.removeChild(fileElement);
                     }
-                    location.reload();
+                    window.location.href = "../admin-delete-selection/admin-delete-selection.html"
                 } else {
                     alert("Errore durante l'eliminazione del file.");
                 }
             }
         };
-        // Invia la richiesta con l'ID del file
-        xhr.send("id=" + fileId);
+        xhr.send("id=" + fileIdToDelete);
     }
-}
+    // Nascondi la finestra modale
+    document.getElementById("deleteModal").style.display = "none";
+    fileIdToDelete = null;
+});
+
+// annulla gay
+document.getElementById("cancelDelete").addEventListener("click", function () {
+    document.getElementById("deleteModal").style.display = "none";
+    fileIdToDelete = null;
+});
+
+
+
+
+
 
     //funzione cambio lingua
     document.addEventListener('DOMContentLoaded', function() {

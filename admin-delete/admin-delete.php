@@ -32,12 +32,9 @@ $result = $conn->query($sql);
     </div>
     <ul class="file-list">
         <?php
-        // Verifica se ci sono risultati
         if ($result->num_rows > 0) {
-            // Output dei dati per ciascun file
             while ($row = $result->fetch_assoc()) {
                 echo "<div class='file-item'>";
-                // Mostra il titolo e le icone per i file italiano e inglese
                 echo "<img src='../asset/pdf-icon.png' alt='pdf-img'>";
                 echo '<p class="p-title">' . $row['title'] . '</p>';
                 echo "<img src='../asset/cestino.png' alt='cestino-img' class='delete-icon' onclick=\"deleteFile(" . $row['id'] . ", 'it')\">";
@@ -50,6 +47,14 @@ $result = $conn->query($sql);
         $conn->close();
         ?>
     </ul>
+
+<div id="deleteModal" class="modal">
+    <div class="modal-content">
+        <p>Sei sicuro di voler eliminare questo file?</p>
+        <button id="confirmDelete" class="modal-button confirm">Conferma</button>
+        <button id="cancelDelete" class="modal-button cancel">Annulla</button>
+    </div>
+</div>
     <script src="admin-delete.js"></script>
 </body>
 
